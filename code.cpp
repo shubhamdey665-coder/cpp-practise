@@ -1,24 +1,22 @@
 #include<iostream>
+#include<vector>
 using namespace std ;
 int main()
 {
-    int n=4;
-    
-
-    for(int i=1;i<=n;i++)
+    vector<int> v ;
+   int n;
+   cout<< "Enter n : ";
+   cin>> n;
+    for(int i=0;i<n;i++)
     {
-       for(int k=0;k<i;k++)
-        {
-            cout<<" ";
-        }
-        for(int j=n;j>=i;j--)
-        {
-            cout<<i;
-            
-            
-        }
-        
-        cout<<endl;
+       int x;
+       cin >> x;
+       v.push_back(x);
+       
+    }
+    for(int i=0;i<n;i++)
+    {
+        cout << v[i] << " ";
     }
     return 0;
 }
