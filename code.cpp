@@ -3,20 +3,23 @@
 using namespace std ;
 int main()
 {
-    vector<int> v ;
-   int n;
-   cout<< "Enter n : ";
-   cin>> n;
-    for(int i=0;i<n;i++)
+   vector<int> v = {4,8,2,8,10,2,5};
+   int largest = INT_MIN;
+   int secLargest =INT_MIN;
+   for(int val : v)
+   {
+    if(val>= largest)
     {
-       int x;
-       cin >> x;
-       v.push_back(x);
-       
+        secLargest = largest;
+        largest = val;
+        
+    } 
+    else if(val<largest && val>=secLargest) {
+        secLargest = val;
     }
-    for(int i=0;i<n;i++)
-    {
-        cout << v[i] << " ";
-    }
+   }
+   
+   
+   cout<<secLargest<<endl;
     return 0;
 }
